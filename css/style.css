@@ -15,6 +15,9 @@
   --active-btn-cl: #188ce8;
   /* Others */
   --main-br-cl: #eeeeee;
+
+  /* Card-size */
+  --card-in-row: 3;
 }
 /* Body */
 .page {
@@ -103,6 +106,12 @@ p {
 .header-item {
   color: var(--primary-txt-cl);
 }
+
+.header-cont {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .header-nav {
   margin-right: auto;
 }
@@ -112,6 +121,8 @@ p {
 }
 .header-active {
   color: var(--actionaly-txt-cl);
+}
+.envelope {
 }
 .header-cont {
   display: inline;
@@ -332,7 +343,7 @@ p {
 .portf-card {
   background: var(--white-txt-cl);
   width: 370px;
-  flex-basis: calc((100% - 60) / 3);
+  flex-basis: calc((100% - calc(var(--card-in-row) - 1)) / var(--card-in-row));
 }
 
 /* h2 - під картинками */
