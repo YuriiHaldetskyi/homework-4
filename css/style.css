@@ -7,6 +7,7 @@
   --white-txt-cl: #ffffff;
   --gray-txt-cl-60: rgba(255, 255, 255, 0.6);
   --gray-txt-cl: #ececec;
+
   /* Back ground */
   --primaty-bg-cl: #f5f5f5;
   --secondary-bg-cl: #f5f4fa;
@@ -15,9 +16,12 @@
   --active-btn-cl: #188ce8;
   /* Others */
   --main-br-cl: #eeeeee;
-
+  --hero-shield-cl: rgba(47, 48, 58, 0.4);
+  --icon-link-cl: #afb1b8;
+  --icon-foot-cl: rgba(255, 255, 255, 0.1);
   /* Card-size */
   --card-in-row: 3;
+  --clients-in-row: 6;
 }
 /* Body */
 .page {
@@ -63,6 +67,9 @@ p {
   clip-path: inset(50%);
   margin: -1px;
 }
+.section {
+  padding: 94px 0;
+}
 .container {
   width: 1200px;
   padding-left: 15px;
@@ -78,10 +85,6 @@ p {
   justify-content: center;
   border-bottom: 1px solid #ececec;
 }
-.section {
-  padding: 94px 0;
-}
-
 .logo-link {
   color: var(--primary-txt-cl);
   font-family: 'Raleway';
@@ -106,8 +109,14 @@ p {
 .header-item {
   color: var(--primary-txt-cl);
 }
-
-.header-cont {
+.header-countacts-group {
+  color: var(--secondary-txt-cl);
+}
+.header-list-cont {
+  display: flex;
+  gap: 30px;
+}
+.header-conts {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -124,19 +133,28 @@ p {
 }
 .envelope {
 }
-.header-cont {
+.header-conts {
   display: inline;
   color: var(--secondary-txt-cl);
+  stroke: var(--secondary-txt-cl);
 }
-.header-cont:hover,
-.header-cont:focus {
+.header-icon {
+  stroke: var(--secondary-txt-cl);
+}
+.header-conts:hover,
+.header-conts:focus {
   color: var(--actionaly-txt-cl);
+  stroke: var(--actionaly-txt-cl);
 }
 /* HERO*/
 .hero {
-  background: var(--actionaly-bg-cl);
-}
-.hero {
+  display: block;
+  margin: 0 auto;
+  background-image: url(../images/hero/backgaroud.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  background-attachment: scroll;
   padding-top: 200px;
   padding-bottom: 200px;
   align-items: center;
@@ -183,6 +201,14 @@ p {
   letter-spacing: 0.03em;
   display: flex;
   gap: 30px;
+}
+.features-item {
+  padding: 25px 100px;
+  background-color: var(--secondary-bg-cl);
+  border-radius: 4px;
+}
+.icons-list {
+  margin-bottom: 30px;
 }
 .features-subtitle {
   font-weight: 700;
@@ -247,12 +273,66 @@ p {
   letter-spacing: 0.03em;
   margin-bottom: 10px;
 }
+.team-cotial-link {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.team-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--main-bg-cl);
+  fill: var(--icon-link-cl);
+}
+.team-link:hover,
+.team-link:focus {
+  fill: var(--white-txt-cl);
+  background-color: var(--actionaly-txt-cl);
+}
+
 .team-text {
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-txt-cl);
+  margin-bottom: 16px;
+}
+
+/* Clietns */
+.main-clients {
+  display: block;
+  margin: 0 auto;
+  padding-top: 102px;
+}
+.clietns-title {
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.clients-list {
+  display: flex;
+  gap: 30px;
+  flex-basis: calc((100% - calc(var(--clients-in-row) - 1)) / var(--clients-in-row));
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.clients-icon {
+  fill: var(--icon-link-cl);
+  border: 1px solid var(--icon-link-cl);
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+.clients-icon:hover,
+.clients-icon:focus {
+  fill: var(--actionaly-txt-cl);
+  border-color: var(--actionaly-txt-cl);
 }
 /* Footer */
 .footer {
@@ -297,6 +377,40 @@ p {
 .adress-link:focus {
   color: var(--actionaly-txt-cl);
 }
+.footer-block-list {
+  display: flex;
+  gap: 70px;
+}
+.sec-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sec-footer-text {
+  text-transform: uppercase;
+  line-height: calc(16 / 14);
+  color: var(--main-bg-cl);
+}
+.sf-cotial-link {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.sf-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--icon-foot-cl);
+  fill: var(--white-txt-cl);
+}
+.sf-link:hover,
+.sf-link:focus {
+  fill: var(--white-txt-cl);
+  background-color: var(--actionaly-txt-cl);
+}
 /* _____________________________________________________________________________ */
 /* CSS for Portfolio  */
 /* Обгорнув у посилання, як Саша Репета рекомендував */
@@ -334,6 +448,8 @@ p {
 .portf-button:focus {
   background: var(--actionaly-txt-cl);
   color: var(--white-txt-cl);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .portf-gallary {
   display: flex;
@@ -344,6 +460,11 @@ p {
   background: var(--white-txt-cl);
   width: 370px;
   flex-basis: calc((100% - calc(var(--card-in-row) - 1)) / var(--card-in-row));
+}
+.portf-card:hover,
+.portf-card:focus {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* h2 - під картинками */
