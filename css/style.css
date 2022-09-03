@@ -131,14 +131,11 @@ p {
 .header-active {
   color: var(--actionaly-txt-cl);
 }
-.envelope {
-}
+
 .header-conts {
-  display: inline;
+  display: flex;
+  gap: 10px;
   color: var(--secondary-txt-cl);
-  stroke: var(--secondary-txt-cl);
-}
-.header-icon {
   stroke: var(--secondary-txt-cl);
 }
 .header-conts:hover,
@@ -146,11 +143,13 @@ p {
   color: var(--actionaly-txt-cl);
   stroke: var(--actionaly-txt-cl);
 }
+
 /* HERO*/
 .hero {
   display: block;
   margin: 0 auto;
-  background-image: url(../images/hero/backgaroud.jpg);
+  background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/backgaroud.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 1600px;
