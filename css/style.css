@@ -215,10 +215,9 @@ p {
   align-items: center;
   background-color: var(--secondary-bg-cl);
   border-radius: 4px;
-}
-.icons-list {
   margin-bottom: 30px;
 }
+
 .features-subtitle {
   font-weight: 700;
   font-size: 14px;
